@@ -1,0 +1,75 @@
+<!--En un nuevo documento html dentro del script, crea la variable
+secretNumber y hazlo igual a un entero
+Preguntale al usuario que adivine el numero en un prompt
+Si el usuario adivina el numero deberá aparecer un alert diciendo que adivinó el número.
+(Tienes que hacer la comparación con ( === ). Investiga en google sobre como usar Number())
+Si el usuario no adivina el numero, deberá aparecer un mensaje diciendo que se equivocó.
+Refactorea tu código, para que te diga,
+si secretNumber es mas alto o mas bajo del que dijo el usuario.-->
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <script>
+      alert ("Ejercicio Numero Secreto")
+      var secretNumber = 789
+      var ingreso = prompt("Adivina el número secreto")
+      if (Number(ingreso)===secretNumber) {
+        alert ("Bien! adivinaste el numero secreto!!")
+      } else {
+        alert ("Lamentablemente te has equivocado")
+      }
+      secretNumber<Number(ingreso)? alert("El numero secreto es menor al ingresado"):alert("El numero secreto es mayor al ingresado")
+
+    </script>
+
+<!--Ejercicio If/Else Club-->
+<!--Psedocódigo-->
+<!-- En un tag script, crea las variables name , age , gender , isMember , thirsty y drinkName .
+Utilizando prompts irás preguntando a medida q lo necesites para darle valor a las variables.
+Si no son un miembro o si son menores de 21 años, dirígete a ellos como señor o señora, según corresponda
+y en tono de disculpa niégales el acceso al club.
+Si no, saludalos como el señor o la señora (en su caso por género) y su nombre, y dales la bienvenida.
+Si tienen sed, pregúntale la bebida que les gustaría tomar.
+Si su bebida favorita es cualquier cosa menos "Café Descafeinado", dice "sí" (nombre) "un" (drinkName) " viniendo!".
+Si piden un descafeinado, echalos del bar.-->
+
+
+    <script>
+
+      var name, age , gender , isMember , thirsty , drinkName
+
+      alert ("Ejercicio Club")
+      name=prompt("Por favor, ingrese su nombre")
+      edad=prompt("Por favor, ingrese su edad")
+      gender=prompt("Por favor, ingrese su género")
+      isMember=prompt("Es usted miembro del club?")
+      if (isMember==="no" || edad<"21") {
+        if (gender==="masculino") {
+          alert ("Disculpe sr "+name+" lamentablemente no puede ingresar al club")
+        } else {
+          alert ("Disculpe sra "+name+" lamentablemente no puede ingresar al club")
+        }
+      } else if (gender==="masculino"){
+          alert ("Bienvenido sr "+name)
+      } else {
+        alert (("Bienvenida sra "+name))
+      }
+
+      thirsty=prompt("Está ud con sed?")
+        if (thirsty==="si") {
+           alert (drinkName=prompt ("Que le gustaría tomar?"))
+        } if (drinkName!=="Café Descafeinado") {
+            alert ("sí "+name+" un "+drinkName+ " viniendo!")
+        }   else {
+          alert ("Por favor retirese del club, aqui no servimos esas bebidas")
+        }
+
+
+    </script>
+  </body>
+</html>
